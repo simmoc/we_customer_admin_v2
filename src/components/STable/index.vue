@@ -36,26 +36,10 @@
                 </ul>
             </li>
         </ul>
-        <!--        <List v-bind="$attrs" v-on="$listeners" :width="width">-->
-        <!--            <template slot-scope="val" slot="edit">-->
-        <!--                <slot :msg="val.msg" name="edit"></slot>-->
-        <!--            </template>-->
-        <!--            <template slot-scope="val" slot="sort">-->
-        <!--                <slot :msg="val.msg" name="sort"></slot>-->
-        <!--            </template>-->
-        <!--&lt;!&ndash;            <template scope="val">&ndash;&gt;-->
-        <!--&lt;!&ndash;                <slot :msg="val" name="edit"></slot>&ndash;&gt;-->
-        <!--&lt;!&ndash;            </template>&ndash;&gt;-->
-        <!--&lt;!&ndash;            <template scope="val">&ndash;&gt;-->
-        <!--&lt;!&ndash;                <slot :msg="val" name="sort"></slot>&ndash;&gt;-->
-        <!--&lt;!&ndash;            </template>&ndash;&gt;-->
-        <!--        </List>-->
-
     </div>
 </template>
 
 <script>
-  import List from './list.vue'
 
   export default {
     name: "index",
@@ -74,7 +58,6 @@
     },
     // inheritAttrs:false,
     components: {
-      List
     },
     mounted() {
       this.clientWidth = document.getElementsByClassName('s-table')[0].clientWidth
