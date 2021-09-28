@@ -49,10 +49,8 @@
                 <div>
                     <div class="table-top-area">
                         <div>
-                            <el-button type="primary" plain size="small" >
-                                <el-icon>
-                                <refresh />
-                            </el-icon>同步企业微信</el-button>
+                            <el-button type="primary" plain size="small" icon="el-icon-refresh">
+                                同步企业微信</el-button>
                             <span class="table-top-tip">最近一次同步时间 2021-06-16 17:30:57</span>
                         </div>
 
@@ -74,11 +72,21 @@
                                 <div>
                                     <el-popover
                                             placement="top-start"
-                                            title="Title"
                                             :width="200"
                                             trigger="hover"
-                                            content="this is content, this is content, this is content"
                                     >
+                                        <div>
+                                            <el-input placeholder="请输入名称" size="small"></el-input>
+                                            <div class="distribution-role-list">
+                                                <div><span>超级管理员</span></div>
+                                                <div><span>运营</span></div>
+                                                <div><span>店长</span></div>
+                                                <div><span>采购</span></div>
+                                                <div><span>客服</span></div>
+                                            </div>
+
+                                        </div>
+
                                         <template #reference>
                                             <el-button type="text">
                                                 分配角色
@@ -211,7 +219,30 @@
           label: 'label',
         },
         page:1,
-        page_size:10
+        page_size:10,
+        options: [
+          {
+            value: 'Option1',
+            label: 'Option1',
+          },
+          {
+            value: 'Option2',
+            label: 'Option2',
+          },
+          {
+            value: 'Option3',
+            label: 'Option3',
+          },
+          {
+            value: 'Option4',
+            label: 'Option4',
+          },
+          {
+            value: 'Option5',
+            label: 'Option5',
+          },
+        ],
+        value:''
       }
     },
     methods:{
@@ -223,7 +254,7 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .search-form{
         padding:24px;
         background-color: #fff;
@@ -248,5 +279,11 @@
     }
     .customer-tree{
         width: calc(100vw - 700px);
+    }
+    .distribution-role-list{
+        &>div{
+            margin-top: 8px;
+            font-size: 12px;
+         }
     }
 </style>
